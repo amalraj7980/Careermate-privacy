@@ -4,177 +4,806 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CareerMate AI Privacy Policy</title>
-
+<meta name="description" content="Privacy Policy for CareerMate AI — how we collect, use, store, and protect your information.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://careermate-privacy.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CareerMate AI Privacy Policy">
+<meta property="og:description" content="Privacy Policy for CareerMate AI — how we collect, use, store, and protect your information.">
+<meta property="og:image" content="assets/careermate-logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CareerMate AI Privacy Policy">
+<meta name="twitter:description" content="Privacy Policy for CareerMate AI — how we collect, use, store, and protect your information.">
+<meta name="twitter:image" content="assets/careermate-logo.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/careermate-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{
-font-family:Arial,Helvetica,sans-serif;
-max-width:900px;
-margin:auto;
-padding:40px;
-line-height:1.7;
-color:#333;
+:root {
+  --primary: #2563EB;
+  --secondary: #1E40AF;
+  --accent: #3B82F6;
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+  --text: #1F2937;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --radius: 16px;
+  --max: 1100px;
+  --hero-bottom: 28px;
 }
 
-h1,h2{
-color:#0A84FF;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-section{
-margin-bottom:30px;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-footer{
-margin-top:40px;
-font-size:14px;
-color:#777;
-border-top:1px solid #ddd;
-padding-top:20px;
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.45);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  z-index: 1000;
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(145deg, #1E40AF 0%, #2563EB 45%, #3B82F6 100%);
+  color: #fff;
+  text-align: center;
+  padding: 48px 20px 56px;
+  border-bottom-left-radius: var(--hero-bottom);
+  border-bottom-right-radius: var(--hero-bottom);
+  box-shadow: 0 16px 40px rgba(30, 64, 175, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% -20%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.brand-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  background: #fff;
+  object-fit: cover;
+}
+
+.hero-kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero .product-name {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.hero .tagline {
+  margin: 0 0 16px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.hero .updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Layout */
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 16px 80px;
+}
+
+.layout {
+  display: grid;
+  gap: 20px;
+}
+
+/* Mobile TOC */
+.toc-mobile {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.toc-mobile summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+}
+
+.toc-mobile summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-mobile summary::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.toc-mobile[open] summary::after {
+  transform: rotate(-135deg);
+  margin-top: 6px;
+}
+
+.toc-mobile nav {
+  border-top: 1px solid var(--border);
+  padding: 8px;
+}
+
+.toc-desktop {
+  display: none;
+}
+
+.toc a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.toc a:hover,
+.toc a.active {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Content cards */
+.content {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 22px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeIn 0.55s ease both;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0 0 14px;
+}
+
+.card p,
+.card li {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0 0 12px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card li:last-child {
+  margin-bottom: 0;
+}
+
+.card b,
+.card strong {
+  font-weight: 700;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 28px;
+  background: #EEF2FF;
+  border: 1px solid #E0E7FF;
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.site-footer .footer-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  object-fit: cover;
+}
+
+.site-footer .footer-brand {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.site-footer .footer-note {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-footer .footer-email {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.site-footer .footer-copy {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Back to top */
+.back-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--primary), var(--secondary));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 50;
+}
+
+.back-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-top:hover {
+  transform: translateY(-2px);
+}
+
+.back-top svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 17px;
+  }
+
+  .brand-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 24px;
+  }
+
+  .hero {
+    padding: 56px 24px 64px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .page {
+    padding: 36px 24px 96px;
+  }
+}
+
+@media (min-width: 960px) {
+  .brand-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 26px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .card h2 {
+    font-size: 28px;
+  }
+
+  .page {
+    padding: 40px 28px 110px;
+  }
+
+  .layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .toc-mobile {
+    display: none;
+  }
+
+  .toc-desktop {
+    display: block;
+    position: sticky;
+    top: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 14px;
+  }
+
+  .toc-desktop .toc-title {
+    margin: 0 8px 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .card {
+    padding: 28px 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card,
+  .back-top {
+    animation: none;
+    transition: none;
+  }
 }
 </style>
-
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<h1>CareerMate AI Privacy Policy</h1>
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <img
+      class="brand-icon"
+      src="assets/careermate-logo.png"
+      width="96"
+      height="96"
+      alt="CareerMate AI App Icon"
+    >
+    <p class="product-name">CareerMate AI</p>
+    <p class="hero-kicker">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="tagline">Your AI-powered career companion.</p>
+    <p class="updated"><strong>Effective Date:</strong> June 2026</p>
+  </div>
+</header>
 
-<p><strong>Effective Date:</strong> June 2026</p>
+<div class="page">
+  <div class="layout">
+    <aside aria-label="Table of contents">
+      <details class="toc-mobile">
+        <summary>On this page</summary>
+        <nav class="toc" aria-label="Privacy policy sections">
+          <a href="#introduction">Introduction</a>
+          <a href="#information-we-collect">Information We Collect</a>
+          <a href="#permissions-used">Permissions Used</a>
+          <a href="#how-we-use-your-information">How We Use Your Information</a>
+          <a href="#data-security">Data Security</a>
+          <a href="#third-party-services">Third Party Services</a>
+          <a href="#your-rights">Your Rights</a>
+          <a href="#contact-us">Contact Us</a>
+        </nav>
+      </details>
 
-<section>
+      <nav class="toc toc-desktop" aria-label="Privacy policy sections">
+        <p class="toc-title">Contents</p>
+        <a href="#introduction">Introduction</a>
+        <a href="#information-we-collect">Information We Collect</a>
+        <a href="#permissions-used">Permissions Used</a>
+        <a href="#how-we-use-your-information">How We Use Your Information</a>
+        <a href="#data-security">Data Security</a>
+        <a href="#third-party-services">Third Party Services</a>
+        <a href="#your-rights">Your Rights</a>
+        <a href="#contact-us">Contact Us</a>
+      </nav>
+    </aside>
 
-<h2>Introduction</h2>
+    <main id="main" class="content">
 
-<p>
+<section class="card" id="introduction">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V6l7-3z"/></svg>
+    </span>
+    <h2>Introduction</h2>
+  </div>
+  <div class="divider"></div>
+  <p>
 CareerMate AI respects your privacy.
 This Privacy Policy explains how we collect, use, store and protect your information while using the CareerMate AI application.
 </p>
-
 </section>
 
-<section>
-
-<h2>Information We Collect</h2>
-
-<ul>
-
+<section class="card" id="information-we-collect">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </span>
+    <h2>Information We Collect</h2>
+  </div>
+  <div class="divider"></div>
+  <ul>
 <li>Account information</li>
-
 <li>Email address</li>
-
 <li>Resume information</li>
-
 <li>Cover letters</li>
-
 <li>Career profile information</li>
-
 <li>Uploaded documents</li>
-
 <li>Scanned documents</li>
-
 <li>Images selected by the user</li>
-
 </ul>
-
 </section>
 
-<section>
-
-<h2>Permissions Used</h2>
-
-<ul>
-
+<section class="card" id="permissions-used">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    </span>
+    <h2>Permissions Used</h2>
+  </div>
+  <div class="divider"></div>
+  <ul>
 <li>Camera (Document Scanner)</li>
-
-<li>Storage (Import & Export)</li>
-
+<li>Storage (Import &amp; Export)</li>
 <li>Photos / Media</li>
-
 <li>Internet Connection</li>
-
 </ul>
-
 </section>
 
-<section>
-
-<h2>How We Use Your Information</h2>
-
-<ul>
-
+<section class="card" id="how-we-use-your-information">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7V18h8v-3.3A7 7 0 0 0 12 2z"/><path d="M9 22h6"/></svg>
+    </span>
+    <h2>How We Use Your Information</h2>
+  </div>
+  <div class="divider"></div>
+  <ul>
 <li>Create resumes</li>
-
 <li>Create cover letters</li>
-
 <li>AI career assistance</li>
-
 <li>Document scanning</li>
-
 <li>OCR processing</li>
-
 <li>PDF generation</li>
-
 <li>Improve application performance</li>
-
 </ul>
-
 </section>
 
-<section>
-
-<h2>Data Security</h2>
-
-<p>
-
+<section class="card" id="data-security">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    </span>
+    <h2>Data Security</h2>
+  </div>
+  <div class="divider"></div>
+  <p>
 We use industry-standard security measures to protect your personal information.
 Your information is processed only for providing CareerMate AI services.
-
 </p>
-
 </section>
 
-<section>
-
-<h2>Third Party Services</h2>
-
-<p>
-
+<section class="card" id="third-party-services">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M18 10h-1.3A8 8 0 1 0 20 16"/><path d="M22 10h-6v6"/></svg>
+    </span>
+    <h2>Third Party Services</h2>
+  </div>
+  <div class="divider"></div>
+  <p>
 CareerMate AI may use trusted third-party services such as Firebase and Google Play Services where applicable.
-
 </p>
-
 </section>
 
-<section>
-
-<h2>Your Rights</h2>
-
-<p>
-
+<section class="card" id="your-rights">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+    </span>
+    <h2>Your Rights</h2>
+  </div>
+  <div class="divider"></div>
+  <p>
 You may request deletion or correction of your personal information by contacting us.
-
 </p>
-
 </section>
 
-<section>
-
-<h2>Contact Us</h2>
-
-<p>
-
+<section class="card" id="contact-us">
+  <div class="card-head">
+    <span class="card-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+    </span>
+    <h2>Contact Us</h2>
+  </div>
+  <div class="divider"></div>
+  <p>
 Email:
 <b>careermateai.support@gmail.com</b>
-
 </p>
-
 </section>
 
-<footer>
+    </main>
+  </div>
 
-© 2026 CareerMate AI. All Rights Reserved.
+  <footer class="site-footer">
+    <img
+      class="footer-icon"
+      src="assets/careermate-logo.png"
+      width="56"
+      height="56"
+      alt="CareerMate AI App Icon"
+    >
+    <p class="footer-brand">CareerMate AI</p>
+    <p class="footer-note">Privacy Notice</p>
+    <p class="footer-email">
+      Support:
+      <a href="mailto:careermateai.support@gmail.com">careermateai.support@gmail.com</a>
+    </p>
+    <p class="footer-copy">© 2026 CareerMate AI. All Rights Reserved.</p>
+  </footer>
+</div>
 
-</footer>
+<button class="back-top" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
 
+<script>
+(function () {
+  var backTop = document.querySelector('.back-top');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var sections = links
+    .map(function (link) {
+      var id = link.getAttribute('href');
+      return id ? document.querySelector(id) : null;
+    })
+    .filter(Boolean);
+
+  function onScroll() {
+    if (!backTop) return;
+    if (window.scrollY > 420) {
+      backTop.classList.add('visible');
+    } else {
+      backTop.classList.remove('visible');
+    }
+
+    var current = sections[0];
+    var offset = 120;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].getBoundingClientRect().top - offset <= 0) {
+        current = sections[i];
+      }
+    }
+
+    links.forEach(function (link) {
+      var active = current && link.getAttribute('href') === '#' + current.id;
+      link.classList.toggle('active', !!active);
+      if (active) {
+        link.setAttribute('aria-current', 'true');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  if (backTop) {
+    backTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
 </body>
-
 </html>
